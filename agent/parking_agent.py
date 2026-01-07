@@ -209,7 +209,7 @@ class ParkingAgent:
 
         self.log_path = pathlib.Path(self.cfg.log_dir)
         if not self.log_path.exists():
-            self.log_path.mkdir()
+            self.log_path.mkdir(parents=True, exist_ok=True)
 
         self.BOS_token = self.cfg.token_nums - 3
 
